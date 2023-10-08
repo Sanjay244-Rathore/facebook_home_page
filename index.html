@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LogIn_page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        #loader {
+            display: block;
+            /* border: 1px solid transparent; */
+            margin: auto;
+            height: 100px;
+            width: 100px;
+            /* display: flex; */
+            /* justify-content: center;
+            align-items: center;
+            text-align: center; */
+        }
+        
+        #sec_login {
+            border: 1px solid transparent;
+            height: 745px;
+            /* align-items: center; */
+            /* display:flex ; */
+            display: none;
+            /* flex-direction:column; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            height: 200px;
+        }
+        
+        h3{
+            border: 1px solid transparent;
+            text-align: center;
+        }
+        #login_btn{
+            width: 100%;
+            background-color: rgb(66, 66, 232);
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            padding: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #email {
+            margin-top: -10px;
+            width: 100%;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #password{
+            margin-top: -10px;
+            width: 100%;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;            
+        }
+        #confirm{
+            border: 1px solid transparent;
+            text-align: center;
+        }
+        .p{
+            font-weight: bold;
+            padding-top: 12px; 
+        }
+        
+        #forget{
+            /* border: 1px solid purple; */
+            font-weight: bold;
+            color: black;
+        }
+        #forget:hover{
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+        #sub-sec{
+            border: 2px solid transparent;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        #message{
+            display: none;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <img src="https://www.ewfm.co.uk/wp-content/uploads/2022/05/one_loader.gif" alt="" id="loader">
+        <div id="sec_login" class="container-fluid">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-4" id="sub-sec">
+                    <h3>Log In</h3>
+                    <p class="p">Email Address : </p>
+                    <input type="email" placeholder="Email Address" id="email">
+                    <p class="p">Password : </p>
+                    <input type="password" placeholder="Password" id="password">
+                    <p id="message"></p>
+                    <button id="login_btn" onclick="login()">Log In</button>
+                   <p style="text-align: end;"> <a id="forget" href="./forgot_pass.html">Forgot Password?</a></p>
+                    <p id="confirm">Don't have an account? <a href="./signup.html">Sign Up</a></p>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./JS/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forgot_password</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    #sub-sec {
+        /* border: 3px solid red; */
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        padding: 10px 15px;
+        /* height: /px; */
+    }
+
+    h3 {
+        border: 1px solid transparent;
+        text-align: center;
+    }
+
+    #forgot_pass_btn {
+        width: 100%;
+        background-color: rgb(66, 66, 232);
+        color: white;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    #for_message {
+        display: none;
+    }
+
+    #para {
+        font-weight: bold;
+    }
+
+    #for_pass {
+        /* border: 2px solid rebeccapurple; */
+        height: 615px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #for_email {
+        margin-top: -10px;
+        width: 100%;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    a {
+        /* font-weight: bold; */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        /* border: 1px solid rebeccapurple;/ */
+        text-decoration: none;
+    }
+
+    #detail {
+        font-size: 13px;
+    }
+
+    #dev {
+        padding-top: 10px;
+        /* border: 2px solid red; */
+        text-align: center;
+    }
+
+    #verify {
+        /* border: 2px solid teal; */
+        display: none;
+    }
+
+    #email_icon {
+        /* border: 1px solid red; */
+        width: 80px;
+        height: 80px;
+    }
+
+    #dev_img {
+        /* border: 2px solid /greenyellow; */
+        text-align: center;
+    }
+
+    #sent {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #data {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    #verify-sub {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        padding: 20px 30px;
+        /* display: none; */
+    }
+
+    #please {
+        font-size: 22px;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    #btn{
+        /* border: 2px solid red; */
+        padding: 0px;
+    }
+    #resend_btn{
+        width: 100%;
+        background-color: rgb(66, 66, 232);
+        color: white;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
+        /* margin-top: 10px; */
+    }
+    #confirm_btn{
+        width: 100%;
+        background-color: rgb(66, 66, 232);
+        color: white;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
+        /* margin-top: 10px; */
+    }
+    #verify_message{
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="for_pass" class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4" id="sub-sec">
+                <h3>Forgot Password</h3>
+                <p id="detail">Lost your password? Please enter your email address. You will receive
+                    a link to create a new password via email.
+                </p>
+                <p id="para">Email Address : </p>
+                <input type="email" placeholder="Email Address" id="for_email">
+                <p id="for_message"></p>
+                <button id="forgot_pass_btn" onclick="reset()">Request password reset</button>
+                <div id="dev">
+                    <span id="span"><a href="./index.html">Back to Log In </a></span>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <div id="verify" class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-5" id="verify-sub">
+                <div id="dev_img">
+                    <img src="./Icons/email.png" alt="" id="email_icon">
+                </div>
+                <h3 id="please">Please verify your email</h3>
+                <p id="sent">You're almost there! We sent email to <a href="">sanjaykumar@gmail.com</a></p>
+                <p id="data">Just click on the link in that email to complete your signup. If
+                    you don't see it, you may need to <b> check your spam </b> folder.
+                </p>
+                <p id="verify_message"></p>
+                <div id="btn" class="container-fluid">
+                    <div class="row">
+                        <div class="col-5">
+                            <button id="resend_btn" onclick="resend()">Resend Email</button>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col-5">
+                            <button id="confirm_btn" onclick="confirm()">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="./forgot_pass.html"></a> -->
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./signup_JS/app.js"></script>
+</body>
+
+</html>

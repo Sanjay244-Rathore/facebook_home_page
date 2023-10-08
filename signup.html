@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SignUp_page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    #sec_signUp {
+        border: 1px solid transparent;
+        height: 745px;
+        /* display: none; */
+        height: 200px;
+    }
+
+    h3 {
+        border: 1px solid transparent;
+        text-align: center;
+    }
+
+    #signUp_btn {
+        width: 100%;
+        background-color: rgb(66, 66, 232);
+        color: white;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    #email {
+        margin-top: -10px;
+        width: 100%;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #first_name {
+        margin-top: -10px;
+        width: 100%;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #last_name {
+        margin-top: -10px;
+        width: 100%;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #mob_num {
+        margin-top: -10px;
+        width: 100%;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #password {
+        margin-top: -10px;
+        width: 100%;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #confirm_pass {
+        margin-top: -10px;
+        width: 100%;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #account_confirm {
+        border: 1px solid transparent;
+        text-align: center;
+    }
+
+    .para {
+        font-weight: bold;
+        padding-top: 12px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #sub-section {
+        border: 2px solid transparent;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    #outcome {
+        display: none;
+        margin-top: 5px;
+    }
+</style>
+
+<body>
+    <div id="sec_signUp" class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-4" id="sub-section">
+                <h3>SignUp</h3>
+                <p class="para">First Name:</p>
+                <input type="text" placeholder="First Name" id="first_name" value="sanjay">
+                <p class="para">Last Name:</p>
+                <input type="text" placeholder="Last Name" id="last_name" value="kumar">
+                <p class="para">Mobile Number:</p>
+                <input type="number" placeholder="Mobile Number" id="mob_num" value="23123">
+                <p class="para">Email Address : </p>
+                <input type="email" placeholder="Email Address" id="email" value="karan@gmail.com">
+                <p class="para">Password : </p>
+                <input type="password" placeholder="Password" id="password" value="karan12">
+                <p class="para">Re-enter Password:</p>
+                <input type="password" placeholder="Re-enter Password" id="confirm_pass" value="karan12">
+                <p id="outcome"></p>
+                <button id="signUp_btn" onclick="SignUp()">Sign Up</button>
+                <p id="account_confirm">Already have an account? <a href="./index.html">Log In</a></p>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./signup_JS/app.js"></script>
+</body>
+
+</html>
